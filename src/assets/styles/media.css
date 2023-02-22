@@ -1,0 +1,1056 @@
+@media (max-width: 1199px) {
+  header .music-cover .music-filter {
+    width: 210px;
+    height: 210px;
+  }
+
+  header .music-description .music-title h1 {
+    font-size: 2.3rem;
+  }
+
+  header .music-description .music-title h2 {
+    font-size: 1.3rem;
+  }
+
+  header .music-range div span {
+    font-size: 1.1rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-1 button svg {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-2 button svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  aside .sidebar-logo h2 {
+    font-size: 1.3rem;
+  }
+
+  aside nav ul li a svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  aside nav ul li a span {
+    font-size: 1.2rem;
+  }
+
+  aside p {
+    font-size: 1.1rem;
+  }
+
+  .music-container h2,
+  .contact-us-container h2,
+  .about-us-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .music-item .music-item-desc h3 {
+    font-size: 1.5rem;
+  }
+
+  .music-item .music-item-desc h5 {
+    font-size: 1.1rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    margin-right: 7rem;
+  }
+
+  .music-item .music-item-options span {
+    font-size: 1.1rem;
+  }
+
+  .music-container .alert-custom {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 991px) {
+  header .music-cover svg {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  header .music-cover .music-filter {
+    width: 175px;
+    height: 175px;
+  }
+
+  header .music-description .music-title h1 {
+    font-size: 2rem;
+  }
+
+  header .music-description .music-title h2 {
+    font-size: 1.1rem;
+  }
+
+  header .music-range div span {
+    font-size: 1rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-1 button svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-2 button svg {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  header .main-logo .main-logo-box h4 {
+    letter-spacing: 0.5rem;
+  }
+
+  header .main-logo .main-logo-box h4 span:first-child,
+  header .main-logo .main-logo-box h4 span:last-child {
+    font-size: 0.85rem;
+    vertical-align: 3px;
+  }
+
+  header .main-logo .main-logo-box h4 span:nth-child(even) {
+    font-size: 1.4rem;
+    vertical-align: 2px;
+  }
+
+  header .main-logo .main-logo-box h4 span:nth-child(3) {
+    padding: 0 0.4rem;
+    font-size: 1.5rem;
+  }
+
+  header .favorite-star button svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  header .Toastify__toast-container {
+    width: 250px;
+  }
+
+  header .Toastify__toast-body div:last-child {
+    font-size: 1.3rem;
+  }
+
+  aside nav ul li {
+    padding: 0.3rem 0;
+  }
+
+  aside nav ul li a svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  aside nav ul li a span {
+    font-size: 1.1rem;
+  }
+
+  aside p {
+    font-size: 1rem;
+  }
+
+  .music-container,
+  .contact-us-container,
+  .about-us-container {
+    padding: 2rem 2rem;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    margin-right: 5rem;
+  }
+
+  .contact-us-container p,
+  .contact-us-container form label,
+  .contact-us-container form input[type='submit'],
+  .contact-us-container .address-container h5,
+  .about-us-container p,
+  .about-us-container h5 {
+    font-size: 1.1rem;
+  }
+
+  .contact-us-container form input,
+  .contact-us-container form textarea {
+    font-size: 1rem !important;
+  }
+
+  .contact-us-container form input::placeholder,
+  .contact-us-container form textarea::placeholder,
+  .contact-us-container form select {
+    font-size: 1rem !important;
+  }
+
+  .contact-us-container .address-container .address-info {
+    font-size: 1.05rem;
+  }
+
+  .music-container .alert-custom {
+    font-size: 1.05rem;
+  }
+
+  .music-container .alert-custom svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+@media (max-width: 879px) {
+
+  .music-container,
+  .contact-us-container,
+  .about-us-container {
+    padding: 2rem 1rem;
+  }
+
+  .music-container h2,
+  .contact-us-container h2,
+  .about-us-container h2 {
+    font-size: 1.5rem;
+  }
+
+  .music-item .music-item-desc h3 {
+    font-size: 1.3rem;
+  }
+
+  .music-item .music-item-desc h5 {
+    font-size: 1rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    margin-right: 4rem;
+  }
+
+  .music-item .music-item-options span {
+    font-size: 1rem;
+  }
+
+  .contact-us-container p,
+  .contact-us-container form label,
+  .contact-us-container form input[type='submit'],
+  .contact-us-container .address-container h5,
+  .about-us-container p,
+  .about-us-container h5 {
+    font-size: 1.05rem;
+  }
+
+  .contact-us-container .address-container .address-info {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  header .music-cover {
+    height: 640px;
+  }
+
+  header .music-cover .music-filter {
+    width: 640px;
+    height: 100%;
+    border-radius: 10px !important;
+    top: 0;
+    transform: translate(-50%, 0);
+  }
+
+  header .music-description {
+    padding: 0 1.8rem;
+  }
+
+  header .music-description .music-title h1 {
+    font-size: 2.3rem;
+  }
+
+  header .music-description .music-title h2 {
+    font-size: 1.6rem;
+  }
+
+  header .favorite-star button svg {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  header .music-range div span {
+    font-size: 1.1rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-1 button svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-2 button svg {
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+
+  header .main-logo-box {
+    width: 100% !important;
+    flex-direction: row !important;
+  }
+
+  header .main-logo-box img {
+    width: 25% !important;
+    margin-left: 2rem;
+  }
+
+  header .main-logo .main-logo-box h4 span:first-child,
+  header .main-logo .main-logo-box h4 span:last-child {
+    font-size: 1.1rem;
+    vertical-align: 4px;
+  }
+
+  header .main-logo .main-logo-box h4 span:nth-child(even) {
+    font-size: 1.6rem;
+    vertical-align: 2px;
+  }
+
+  header .main-logo .main-logo-box h4 span:nth-child(3) {
+    padding: 0 0.6rem;
+    font-size: 2rem;
+  }
+
+  header .Toastify__toast-container {
+    width: 320px;
+  }
+
+  header .Toastify__toast-body div:last-child {
+    font-size: 1.5rem;
+  }
+
+  .sidebar {
+    height: auto;
+    border-radius: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
+  aside .nav-custom {
+    padding-left: 0 !important;
+  }
+
+  aside ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+  }
+
+  aside ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  aside nav ul li a svg {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  aside nav ul li a span {
+    padding: 0 0.5rem;
+    font-size: 1rem;
+  }
+
+  .music-container,
+  .contact-us-container,
+  .about-us-container {
+    height: auto !important;
+    padding: 2rem 2rem !important;
+    overflow: visible !important;
+  }
+
+  .music-container,
+  .contact-us-container,
+  .about-us-container {
+    margin-bottom: 6rem;
+  }
+
+  .music-container h2,
+  .contact-us-container h2,
+  .about-us-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .music-item .music-item-desc h3 {
+    font-size: 1.5rem;
+  }
+
+  .music-item .music-item-desc h5,
+  .music-item .music-item-options span {
+    font-size: 1.2rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    width: 18%;
+    margin-right: 4rem;
+  }
+}
+
+@media (max-width: 671px) {
+  header .music-cover {
+    height: 545px;
+  }
+
+  header .music-cover .music-filter {
+    width: 545px;
+  }
+
+  header .Toastify__toast-container {
+    width: 300px;
+  }
+
+  header .Toastify__toast-body div:last-child {
+    font-size: 1.4rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    width: 18%;
+  }
+}
+
+@media (max-width: 575px) {
+  .jump-to-top {
+    padding: 0.8rem !important;
+    right: 2.5%;
+  }
+
+  .jump-to-top svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  header .music-cover {
+    height: 520px;
+  }
+
+  header .music-cover .music-filter {
+    width: 520px;
+  }
+
+  header .music-description .music-title h1 {
+    font-size: 1.9rem;
+  }
+
+  header .music-description .music-title h2 {
+    font-size: 1.5rem;
+  }
+
+  header .favorite-star button svg {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+
+  header .main-logo-box img {
+    width: 28% !important;
+  }
+
+  aside ul {
+    justify-content: space-around;
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  aside nav ul li a svg {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .music-container,
+  .contact-us-container,
+  .about-us-container {
+    padding: 2rem 1.5rem !important;
+  }
+
+  .music-container h2,
+  .contact-us-container h2,
+  .about-us-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .music-item .music-item-desc h3 {
+    font-size: 1.2rem;
+  }
+
+  .music-item .music-item-desc h5,
+  .music-item .music-item-options span {
+    font-size: 1rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    width: 15%;
+    margin-right: 3rem;
+  }
+}
+
+@media (max-width: 545px) {
+  header .music-cover {
+    height: 490px;
+  }
+
+  header .music-cover .music-filter {
+    width: 490px;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .music-container .alert-custom {
+    font-size: 1.03rem;
+  }
+
+  header .Toastify__toast-container {
+    width: 260px;
+  }
+
+  header .Toastify__toast-body div:last-child {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 515px) {
+  header .music-cover {
+    height: 440px;
+  }
+
+  header .music-cover .music-filter {
+    width: 440px;
+  }
+
+  header .music-description .music-title h1 {
+    font-size: 1.7rem;
+  }
+
+  header .music-description .music-title h2 {
+    font-size: 1.3rem;
+  }
+
+  header .favorite-star button svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  header .main-logo .main-logo-box h4 {
+    letter-spacing: 0.5rem;
+  }
+
+  header .main-logo .main-logo-box h4 span:first-child,
+  header .main-logo .main-logo-box h4 span:last-child {
+    font-size: 0.85rem;
+    vertical-align: 3px;
+  }
+
+  header .main-logo .main-logo-box h4 span:nth-child(even) {
+    font-size: 1.3rem;
+    vertical-align: 2px;
+  }
+
+  header .main-logo .main-logo-box h4 span:nth-child(3) {
+    padding: 0 0.4rem;
+    font-size: 1.5rem;
+  }
+
+  header .Toastify__toast-container {
+    width: 235px;
+  }
+
+  header .Toastify__toast-icon {
+    width: 18px
+  }
+
+  header .Toastify__toast-body div:last-child {
+    font-size: 1.2rem;
+  }
+
+  header .Toastify__toast-container.Toastify__toast-container--top-center {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  aside nav ul li a svg {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .music-container h2,
+  .contact-us-container h2,
+  .about-us-container h2 {
+    font-size: 1.4rem;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .music-item .music-item-desc h3 {
+    font-size: 1.1rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    margin-right: 2rem;
+  }
+
+  .music-container .music-item-desc h6 {
+    font-size: 0.9rem;
+  }
+
+  .music-container .alert-custom {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .music-container .alert-custom svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .contact-us-container p,
+  .contact-us-container form label,
+  .contact-us-container form input[type='submit'],
+  .contact-us-container .address-container h5,
+  .about-us-container p,
+  .about-us-container h5 {
+    font-size: 0.98rem;
+  }
+
+  .contact-us-container form input,
+  .contact-us-container form textarea {
+    font-size: 0.9rem !important;
+  }
+
+  .contact-us-container form input::placeholder,
+  .contact-us-container form textarea::placeholder,
+  .contact-us-container form select {
+    font-size: 0.9rem !important;
+  }
+
+  .contact-us-container .address-container .address-info {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 465px) {
+  header .music-cover {
+    height: 390px;
+  }
+
+  header .music-cover .music-filter {
+    width: 390px;
+  }
+
+  header .Toastify__toast-container.Toastify__toast-container--top-center {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 68px;
+    height: 68px;
+  }
+
+  .music-container .alert-custom {
+    font-size: 0.8rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    width: 12%;
+  }
+}
+
+@media (max-width: 415px) {
+  .jump-to-top {
+    padding: 0.7rem !important;
+    right: 2.5%;
+  }
+
+  .jump-to-top svg {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  header .music-cover {
+    height: 345px;
+  }
+
+  header .music-cover .music-filter {
+    width: 345px;
+  }
+
+  header .music-description {
+    padding: 0 0.8rem;
+  }
+
+  header .music-description .music-title h1 {
+    font-size: 1.4rem;
+  }
+
+  header .music-description .music-title h2 {
+    font-size: 1.1rem;
+  }
+
+  header .favorite-star button svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  header .music-range div span {
+    font-size: 1rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-1 button svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-2 button svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-2 button {
+    margin-left: 0.1rem !important;
+  }
+
+  header .main-logo-box img {
+    width: 33% !important;
+    margin-left: 1rem;
+  }
+
+  header .Toastify__toast-container {
+    width: 220px;
+  }
+
+  header .Toastify__toast-icon {
+    width: 15px;
+  }
+
+  header .Toastify__toast-body div:last-child {
+    font-size: 1.05rem;
+  }
+
+  aside nav ul li a svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+
+  .music-container,
+  .contact-us-container,
+  .about-us-container {
+    padding: 2rem 1rem !important;
+  }
+
+  .music-container h2,
+  .contact-us-container h2,
+  .about-us-container h2 {
+    font-size: 1.2rem;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    width: 10%;
+    margin-right: 1rem;
+  }
+
+  .music-container .alert-custom {
+    text-align: justify;
+    line-height: 200%;
+  }
+
+  .music-container .alert-custom svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .jump-to-top {
+    padding: 0.6rem !important;
+    right: 3%;
+  }
+
+  .jump-to-top svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  header .music-cover {
+    height: 300px;
+  }
+
+  header .music-cover .music-filter {
+    width: 300px;
+  }
+
+  .music-item {
+    margin-bottom: 2.5rem !important;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 55px;
+    height: 55px;
+  }
+
+  .music-item .music-item-desc h3 {
+    font-size: 0.95rem;
+  }
+
+  .music-item .music-item-desc h5,
+  .music-item .music-item-options span {
+    font-size: 0.8rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    margin-right: 0.8rem;
+  }
+
+  .music-item .music-item-options svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .music-container .music-item-desc h6 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 325px) {
+  header .music-cover {
+    height: 300px;
+  }
+
+  header .music-cover .music-filter {
+    width: 100%;
+  }
+
+  header .music-description {
+    padding: 0 0.5rem;
+  }
+
+  header .music-description .music-title h1 {
+    font-size: 1.2rem;
+  }
+
+  header .music-description .music-title h2 {
+    font-size: 1rem;
+  }
+
+  header .favorite-star button svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  header .music-range {
+    margin-top: 1rem !important;
+  }
+
+  header .music-nav .btn-toolbar-custom-1 button svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-2 button svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .main-logo-box img {
+    margin-left: 0.2rem;
+  }
+
+  aside nav ul li a svg {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .music-container,
+  .contact-us-container,
+  .about-us-container {
+    padding: 2rem 0.8rem !important;
+  }
+
+  .music-container h2,
+  .contact-us-container h2,
+  .about-us-container h2 {
+    font-size: 1rem;
+  }
+
+  .music-item {
+    margin-bottom: 2rem !important;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 46px;
+    height: 46px;
+  }
+
+  .music-item .music-item-desc h3 {
+    font-size: 0.95rem;
+  }
+
+  .music-item .music-item-desc h5,
+  .music-item .music-item-options span {
+    font-size: 0.75rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    width: 8%;
+    margin-right: 0.6rem;
+  }
+
+  .contact-us-container p,
+  .contact-us-container form label,
+  .contact-us-container form input[type='submit'],
+  .contact-us-container .address-container h5,
+  .about-us-container p,
+  .about-us-container h5 {
+    font-size: 0.85rem;
+  }
+
+  .contact-us-container form input,
+  .contact-us-container form textarea {
+    font-size: 0.8rem !important;
+  }
+
+  .contact-us-container form input::placeholder,
+  .contact-us-container form textarea::placeholder,
+  .contact-us-container form select {
+    font-size: 0.8rem !important;
+  }
+
+  .contact-us-container .address-container .address-info {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 276px) {
+  .jump-to-top {
+    padding: 0.4rem !important;
+    right: 3.5%;
+  }
+
+  .jump-to-top svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  header .music-cover {
+    height: 250px;
+  }
+
+  header .music-description .music-title h1 {
+    font-size: 1rem;
+  }
+
+  header .music-description .music-title h2 {
+    font-size: 0.8rem;
+  }
+
+  header .music-range div span {
+    font-size: 0.8rem;
+  }
+
+  header .music-nav .btn-toolbar-custom-1 button,
+  header .music-nav .btn-toolbar-custom-2 button {
+    margin-left: 0 !important;
+    padding: 0.1rem 0.3rem;
+  }
+
+  header .Toastify__toast-container {
+    width: 100%;
+  }
+
+  header .Toastify__toast-icon {
+    width: 12px;
+  }
+
+  header .Toastify__toast-body div:last-child {
+    font-size: 1rem;
+  }
+
+  aside nav ul li a svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .music-container h2,
+  .contact-us-container h2,
+  .about-us-container h2 {
+    font-size: 0.9rem;
+  }
+
+  .music-item .music-item-cover .music-image {
+    width: 38px;
+    height: 38px;
+  }
+
+  .music-item .music-item-desc h3 {
+    font-size: 0.8rem;
+  }
+
+  .music-item .music-item-desc h5,
+  .music-item .music-item-options span {
+    font-size: 0.7rem;
+  }
+
+  .music-item .music-item-desc .equ-boxes {
+    width: 10%;
+    margin-right: 0.4rem;
+  }
+
+  .music-item .music-item-options svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .music-container .music-item-desc h6 {
+    font-size: 0.7rem;
+  }
+
+  .contact-us-container p,
+  .contact-us-container form label,
+  .contact-us-container form input[type='submit'],
+  .contact-us-container .address-container h5,
+  .about-us-container p,
+  .about-us-container h5 {
+    font-size: 0.75rem;
+  }
+
+  .contact-us-container form input,
+  .contact-us-container form textarea {
+    font-size: 0.65rem !important;
+  }
+
+  .contact-us-container form input::placeholder,
+  .contact-us-container form textarea::placeholder,
+  .contact-us-container form select {
+    font-size: 0.65rem !important;
+  }
+
+  .contact-us-container .address-container .address-info {
+    font-size: 0.67rem;
+  }
+}
