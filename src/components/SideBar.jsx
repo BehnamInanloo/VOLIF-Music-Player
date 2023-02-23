@@ -8,15 +8,14 @@ const SideBar = () => {
   let height
 
   const mainHeightHandler = () => {
-    height = window.getComputedStyle(sideBar.current).getPropertyValue('height')
+    height = window.getComputedStyle(sideBarRef.current).getPropertyValue('height')
     setMainHeight(height)
   }
-
   // useContext initializing
   const { setMainHeight } = useContext(myContext)
 
   // useRef initializing
-  const sideBar = useRef()
+  const sideBarRef = useRef()
 
   // useEffect initializing for main element height
   useEffect(() => {
@@ -24,12 +23,14 @@ const SideBar = () => {
   }, [])
 
   window.addEventListener('resize', function () {
-    mainHeightHandler()
+    if (sideBarRef.current != undefined) {
+      mainHeightHandler()
+    }
   })
 
   // jsx
   return (
-    <aside ref={sideBar} className='d-flex flex-column justify-content-around sidebar'>
+    <aside ref={sideBarRef} className='d-flex flex-column justify-content-around sidebar'>
       <div className='sidebar-logo d-none d-md-flex align-items-center my-md-3 my-lg-4 ps-5'>
         <img src={logo} className='rounded-circle' />
         <h2 className='px-4 ls-1 mb-0'>MusicPlayer</h2>

@@ -148,8 +148,8 @@ const Header = ({ audioRef }) => {
                 </div>
                 <div className='col-12'>
                   <div className='range-slider w-100 position-relative mb-3'>
-                    <div className='progress h-100 position-absolute' style={{ width: `${(songCurrentTime / songFullTime) * 100}%` }}></div>
-                    <input type='range' className='w-100 position- absolute' min={0} max={(songFullTime) ? songFullTime : 0} value={songCurrentTime}
+                    <div className='progress-custom h-100 position-absolute' style={{ width: `${(songCurrentTime / songFullTime) * 100}%` }}></div>
+                    <input type='range' className='w-100 position-absolute' min={0} max={(songFullTime) ? songFullTime : 0} value={songCurrentTime}
                       onChange={(event) => audioRef.current.currentTime = event.target.value}
                     />
                   </div>

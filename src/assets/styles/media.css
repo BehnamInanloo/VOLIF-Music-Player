@@ -280,6 +280,18 @@
     font-size: 1.1rem;
   }
 
+  header .music-nav .btn-toolbar-custom-1 button:hover {
+    background-color: transparent !important;
+  }
+
+  header .music-nav .btn-toolbar-custom-2 button:hover {
+    background-color: #424649;
+  }
+
+  header .music-nav .btn-toolbar-custom-2 button.btn-dark {
+    background-color: #212121 !important;
+  }
+
   header .music-nav .btn-toolbar-custom-1 button svg {
     width: 1.6rem;
     height: 1.6rem;
@@ -485,6 +497,10 @@
     font-size: 1.6rem;
   }
 
+  .music-item::after {
+    height: 2px;
+  }
+
   .music-item .music-item-desc h3 {
     font-size: 1.2rem;
   }
@@ -571,6 +587,10 @@
 
   header .Toastify__toast-container {
     width: 235px;
+  }
+
+  header .Toastify__toast-body {
+    padding: 0 6px;
   }
 
   header .Toastify__toast-icon {
@@ -674,6 +694,12 @@
 
   .music-item .music-item-desc .equ-boxes {
     width: 12%;
+  }
+}
+
+@media (max-width: 480px) {
+  header .Toastify__toast {
+    border-radius: 4px;
   }
 }
 
@@ -903,8 +929,8 @@
   }
 
   .music-item .music-item-cover .music-image {
-    width: 46px;
-    height: 46px;
+    width: 48px;
+    height: 48px;
   }
 
   .music-item .music-item-desc h3 {
