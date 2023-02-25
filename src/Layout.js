@@ -1,7 +1,5 @@
 import { useRef, useEffect, useContext } from 'react'
 import { myContext } from './contexts'
-import { FaAngleUp } from "react-icons/fa"
-
 import Header from './components/Header'
 import SideBar from './components/SideBar'
 
@@ -12,6 +10,7 @@ const Layout = ({ children }) => {
 
   // useRef initializing
   const audioRef = useRef()
+  const jumpRef = useRef()
 
   // useEffect initializing for audio play, pause, currentTime & duration
   useEffect(() => {
@@ -79,6 +78,21 @@ const Layout = ({ children }) => {
     }
   }
 
+  // jump to top handler button function
+  window.addEventListener('scroll', function () {
+    const jumpBtn = jumpRef.current
+    if (jumpBtn != undefined) {
+      const jumpBtnClasses = jumpBtn.classList
+      if (this.scrollY < 500) {
+        jumpBtnClasses.add('d-none')
+        jumpBtnClasses.remove('d-inline-block')
+      } else {
+        jumpBtnClasses.remove('d-none')
+        jumpBtnClasses.add('d-inline-block')
+      }
+    }
+  })
+
   // jsx
   return (
     <>
@@ -93,9 +107,11 @@ const Layout = ({ children }) => {
             </div>
             <div className='col-md-8'>
               <div className='d-md-none'>
-                <a href='#' className='jump-to-top rounded-circle p-3 d-inline-block'>
-                  <FaAngleUp size='2.2rem' color='#efefef' />
-                </a>
+                <button ref={jumpRef} className='btn d-none rounded-circle jump-to-top'
+                  onClick={() => window.location = '#'}
+                >
+                  &#8593;
+                </button>
               </div>
               {children}
             </div>

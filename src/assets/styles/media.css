@@ -417,6 +417,12 @@
 }
 
 @media (max-width: 671px) {
+  .jump-to-top {
+    font-size: 16px;
+    padding: 0.9rem 1.3rem 1rem 1.3rem;
+    right: 9%;
+  }
+
   header .music-cover {
     height: 545px;
   }
@@ -440,13 +446,7 @@
 
 @media (max-width: 575px) {
   .jump-to-top {
-    padding: 0.8rem !important;
-    right: 2.5%;
-  }
-
-  .jump-to-top svg {
-    width: 2rem;
-    height: 2rem;
+    bottom: 65px;
   }
 
   header .music-cover {
@@ -544,6 +544,12 @@
 }
 
 @media (max-width: 515px) {
+  .jump-to-top {
+    font-size: 14px;
+    padding: 0.7rem 1.1rem 0.8rem 1.1rem;
+    right: 10%;
+  }
+
   header .music-cover {
     height: 440px;
   }
@@ -669,6 +675,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  header .Toastify__toast {
+    border-radius: 4px;
+  }
+}
+
 @media (max-width: 465px) {
   header .music-cover {
     height: 390px;
@@ -697,21 +709,9 @@
   }
 }
 
-@media (max-width: 480px) {
-  header .Toastify__toast {
-    border-radius: 4px;
-  }
-}
-
 @media (max-width: 415px) {
   .jump-to-top {
-    padding: 0.7rem !important;
-    right: 2.5%;
-  }
-
-  .jump-to-top svg {
-    width: 1.7rem;
-    height: 1.7rem;
+    right: 9%;
   }
 
   header .music-cover {
@@ -814,13 +814,9 @@
 
 @media (max-width: 370px) {
   .jump-to-top {
-    padding: 0.6rem !important;
-    right: 3%;
-  }
-
-  .jump-to-top svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    font-size: 12px;
+    padding: 0.6rem 1rem 0.7rem 1rem;
+    right: 8.5%;
   }
 
   header .music-cover {
@@ -864,6 +860,12 @@
 }
 
 @media (max-width: 325px) {
+  .jump-to-top {
+    font-size: 11px;
+    padding: 0.5rem 0.8rem 0.6rem 0.8rem;
+    right: 8%;
+  }
+
   header .music-cover {
     height: 300px;
   }
@@ -973,16 +975,6 @@
 }
 
 @media (max-width: 276px) {
-  .jump-to-top {
-    padding: 0.4rem !important;
-    right: 3.5%;
-  }
-
-  .jump-to-top svg {
-    width: 1.3rem;
-    height: 1.3rem;
-  }
-
   header .music-cover {
     height: 250px;
   }

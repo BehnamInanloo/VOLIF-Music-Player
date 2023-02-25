@@ -144,17 +144,22 @@ body {
 .jump-to-top {
   line-height: 100%;
   background-color: #000;
-  opacity: 0.3;
+  opacity: 0.4;
   position: fixed;
-  bottom: 18%;
-  right: 2%;
+  bottom: 80px;
+  right: 8%;
   z-index: 3;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 1.1rem 1.5rem 1.2rem 1.5rem;
+  color: #fff;
+  transition: all 0.5s;
 }
 
-.jump-to-top svg {
-  vertical-align: baseline;
+.jump-to-top:hover {
+  background-color: #000;
+  opacity: 1;
 }
-
 /* ------ end general styles ------ */
 
 /* ------ start header styles ------ */
@@ -420,8 +425,8 @@ aside p {
 }
 
 .music-item .music-item-cover .music-image {
-  width: 90px;
-  height: 90px;
+  width: 85px;
+  height: 85px;
   background-size: 100% 100%;
   cursor: pointer;
 }

@@ -8,9 +8,9 @@ import 'react-toastify/dist/ReactToastify.css'
 
 const Header = ({ audioRef }) => {
   // useContext initializing
-  const { audioHandler, setAudioHandler, currentSong, songCurrentTime, songFullTime, songs,
-    setCurrentSong, setSongs, playInOrderList, repeatCurrentSong, shuffelList,
-    setPlayInOrderList, setRepeatCurrentSong, setShuffelList, favList, setFavList, setPrevSong } = useContext(myContext)
+  const { audioHandler, setAudioHandler, currentSong, setCurrentSong, songCurrentTime, songFullTime,
+    songs, setSongs, playInOrderList, repeatCurrentSong, shuffelList, setPlayInOrderList,
+    setRepeatCurrentSong, setShuffelList, favList, setFavList, setPrevSong } = useContext(myContext)
 
   // second to minute function
   const getCleanTime = (time) => {
@@ -47,6 +47,18 @@ const Header = ({ audioRef }) => {
       toast.success('Added to favorite list', { theme: 'dark' })
     } else {
       toast.warn('Removed from favorite list')
+    }
+  }
+
+  // input title on hover function
+  const timeTitleHover = (event) => {
+    const element = event.target
+    const mouseOffsetX = event.clientX
+    const mouseParentOffsetX = element.offsetParent.offsetLeft
+    if (mouseOffsetX < mouseParentOffsetX) {
+      element.title = '0:00'
+    } else {
+      element.title = getCleanTime((songFullTime * (mouseOffsetX - mouseParentOffsetX)) / (element.offsetWidth))
     }
   }
 
@@ -91,6 +103,7 @@ const Header = ({ audioRef }) => {
     setPlayInOrderList(true)
     setRepeatCurrentSong(false)
     setShuffelList(false)
+    toast.info('Play songs in order', { theme: 'dark' })
   }
 
   // current song handle function
@@ -98,6 +111,7 @@ const Header = ({ audioRef }) => {
     setRepeatCurrentSong(true)
     setPlayInOrderList(false)
     setShuffelList(false)
+    toast.info('Repeat current song', { theme: 'dark' })
   }
 
   // shuffle list handle function
@@ -105,6 +119,7 @@ const Header = ({ audioRef }) => {
     setShuffelList(true)
     setRepeatCurrentSong(false)
     setPlayInOrderList(false)
+    toast.info('Shuffle songs', { theme: 'dark' })
   }
 
   // jsx
@@ -149,8 +164,9 @@ const Header = ({ audioRef }) => {
                 <div className='col-12'>
                   <div className='range-slider w-100 position-relative mb-3'>
                     <div className='progress-custom h-100 position-absolute' style={{ width: `${(songCurrentTime / songFullTime) * 100}%` }}></div>
-                    <input type='range' className='w-100 position-absolute' min={0} max={(songFullTime) ? songFullTime : 0} value={songCurrentTime}
+                    <input type='range' className='w-100 position-absolute' title='' min={0} max={(songFullTime) ? songFullTime : 0} value={songCurrentTime}
                       onChange={(event) => audioRef.current.currentTime = event.target.value}
+                      onMouseMove={timeTitleHover}
                     />
                   </div>
                 </div>

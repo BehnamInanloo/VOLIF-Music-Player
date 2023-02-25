@@ -8,7 +8,7 @@ const Main = () => {
 
   // jsx
   return (
-    <main className='music-container' style={{height: mainHeight}}>
+    <main className='music-container' style={{ height: mainHeight }}>
       <h2 className='mb-4 mb-sm-5 ls-1'>All songs</h2>
       {songs.map((item) => (
         <MusicItem
