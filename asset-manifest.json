@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/VOLIF-Music-Player/static/css/main.b35e360d.css",
-    "main.js": "/VOLIF-Music-Player/static/js/main.3b11e20e.js",
+    "main.css": "/VOLIF-Music-Player/static/css/main.9b2dc748.css",
+    "main.js": "/VOLIF-Music-Player/static/js/main.dd0e6381.js",
     "static/js/787.edefaf22.chunk.js": "/VOLIF-Music-Player/static/js/787.edefaf22.chunk.js",
     "static/media/Mohsen-Chavoshi-Gandomgoon.mp3": "/VOLIF-Music-Player/static/media/Mohsen-Chavoshi-Gandomgoon.cb7b12c81817aeab6249.mp3",
     "static/media/Sirvan-Khosravi-Bonbast.mp3": "/VOLIF-Music-Player/static/media/Sirvan-Khosravi-Bonbast.25ee2fc7b4ca3bfdfdfe.mp3",
@@ -45,12 +45,12 @@
     "static/media/Farzad-Farzin-Chera-To.jpg": "/VOLIF-Music-Player/static/media/Farzad-Farzin-Chera-To.ffc9bb4270b5efc2e76b.jpg",
     "static/media/main-logo.png": "/VOLIF-Music-Player/static/media/main-logo.162688bf20f1e11e199d.png",
     "index.html": "/VOLIF-Music-Player/index.html",
-    "main.b35e360d.css.map": "/VOLIF-Music-Player/static/css/main.b35e360d.css.map",
-    "main.3b11e20e.js.map": "/VOLIF-Music-Player/static/js/main.3b11e20e.js.map",
+    "main.9b2dc748.css.map": "/VOLIF-Music-Player/static/css/main.9b2dc748.css.map",
+    "main.dd0e6381.js.map": "/VOLIF-Music-Player/static/js/main.dd0e6381.js.map",
     "787.edefaf22.chunk.js.map": "/VOLIF-Music-Player/static/js/787.edefaf22.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b35e360d.css",
-    "static/js/main.3b11e20e.js"
+    "static/css/main.9b2dc748.css",
+    "static/js/main.dd0e6381.js"
   ]
 }
