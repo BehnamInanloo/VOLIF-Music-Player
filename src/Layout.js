@@ -107,7 +107,7 @@ const Layout = ({ children }) => {
             </div>
             <div className='col-md-8'>
               <div className='d-md-none'>
-                <button ref={jumpRef} className='btn d-none rounded-circle jump-to-top'
+                <button ref={jumpRef} className='border-0 d-none rounded-circle jump-to-top'
                   onClick={() => window.location = '#'}
                 >
                   &#8593;

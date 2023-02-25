@@ -143,8 +143,7 @@ body {
 
 .jump-to-top {
   line-height: 100%;
-  background-color: #000;
-  opacity: 0.4;
+  background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
   bottom: 80px;
   right: 8%;
@@ -153,12 +152,12 @@ body {
   font-weight: bold;
   padding: 1.1rem 1.5rem 1.2rem 1.5rem;
   color: #fff;
+  outline: none;
   transition: all 0.5s;
 }
 
 .jump-to-top:hover {
-  background-color: #000;
-  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.9);
 }
 /* ------ end general styles ------ */
 
