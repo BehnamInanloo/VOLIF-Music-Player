@@ -19,7 +19,7 @@ const SideBar = () => {
 
   // useEffect initializing for main element height
   useEffect(() => {
-    setTimeout(mainHeightHandler, 500)
+    setTimeout(mainHeightHandler, 1500)
   }, [])
 
   window.addEventListener('resize', function () {
