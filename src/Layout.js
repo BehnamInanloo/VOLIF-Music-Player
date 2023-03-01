@@ -1,12 +1,35 @@
 import { useRef, useEffect, useContext } from 'react'
 import { myContext } from './contexts'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
 import Header from './components/Header'
 import SideBar from './components/SideBar'
 
 const Layout = ({ children }) => {
   // useContext initializing
-  const { audioHandler, setSongCurrentTime, setSongFullTime, prevSong, currentSong, setPrevSong, setCurrentSong, songs,
-    playInOrderList, repeatCurrentSong, songFullTime, setSongs } = useContext(myContext)
+  const {
+    songs,
+    setSongs,
+    favList,
+    activeFavList,
+    setActiveFavList,
+    activeFavSong,
+    setActiveFavSong,
+    audioHandler,
+    setAudioHandler,
+    currentSong,
+    setCurrentSong,
+    prevSong,
+    setPrevSong,
+    setSongCurrentTime,
+    songFullTime,
+    setSongFullTime,
+    playInOrderList,
+    repeatCurrentSong
+  } = useContext(myContext)
+
+  // initializing use navigate
+  const navigate = useNavigate()
 
   // useRef initializing
   const audioRef = useRef()
@@ -63,18 +86,55 @@ const Layout = ({ children }) => {
 
   // automatic go to next song function
   const nextMusicHandler = () => {
-    const index = songs.findIndex((item) => item.id === currentSong[0].id)
-    if (playInOrderList) {
-      if (index === songs.length - 1) {
-        setCurrentSong([songs[0]])
+    if (activeFavList && activeFavSong) {
+      if (favList.length !== 0) {
+        const index = favList.findIndex((item) => item.id === currentSong[0].id)
+        if (playInOrderList) {
+          if (index === favList.length - 1) {
+            setPrevSong([currentSong[0]])
+            setCurrentSong([favList[0]])
+          } else {
+            setPrevSong([currentSong[0]])
+            setCurrentSong([favList[index + 1]])
+          }
+        } else if (repeatCurrentSong) {
+          setPrevSong([currentSong[0]])
+          setCurrentSong([currentSong[0]])
+        } else {
+          const shuffleIndex = Math.floor(Math.random() * favList.length)
+          setPrevSong([currentSong[0]])
+          setCurrentSong([favList[shuffleIndex]])
+        }
       } else {
-        setCurrentSong([songs[index + 1]])
+        setPrevSong([currentSong[0]])
+        setCurrentSong([songs[0]])
+        setAudioHandler(false)
+        setActiveFavList(false)
+        setActiveFavSong(false)
+        setSongCurrentTime(0)
+        setSongFullTime(0)
+        toast.warn('Select your favorite songs')
+        navigate('/')
+        audioRef.current.currentTime = 0
       }
-    } else if (repeatCurrentSong) {
-      setCurrentSong([currentSong[0]])
     } else {
-      const shuffleIndex = Math.floor(Math.random() * songs.length)
-      setCurrentSong([songs[shuffleIndex]])
+      const index = songs.findIndex((item) => item.id === currentSong[0].id)
+      if (playInOrderList) {
+        if (index === songs.length - 1) {
+          setPrevSong([currentSong[0]])
+          setCurrentSong([songs[0]])
+        } else {
+          setPrevSong([currentSong[0]])
+          setCurrentSong([songs[index + 1]])
+        }
+      } else if (repeatCurrentSong) {
+        setPrevSong([currentSong[0]])
+        setCurrentSong([currentSong[0]])
+      } else {
+        const shuffleIndex = Math.floor(Math.random() * songs.length)
+        setPrevSong([currentSong[0]])
+        setCurrentSong([songs[shuffleIndex]])
+      }
     }
   }
 

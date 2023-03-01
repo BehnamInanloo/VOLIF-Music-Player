@@ -1,7 +1,26 @@
-import { memo } from 'react'
+import { memo, useContext } from 'react'
 import { BsStar, BsStarFill } from 'react-icons/bs'
+import { myContext } from '../../contexts'
 
-const MusicItem = ({ cover, artist, name, id, played, isFavorite, songs, setPrevSong, setCurrentSong, currentSong, audioHandler, duration }) => {
+const MusicItem = ({
+  cover,
+  artist,
+  name,
+  id,
+  played,
+  isFavorite,
+  duration }) => {
+
+  const {
+    songs,
+    activeFavList,
+    setActiveFavSong,
+    currentSong,
+    setCurrentSong,
+    setPrevSong,
+    audioHandler
+  } = useContext(myContext)
+
   // second to minute function
   const getCleanTime = (time) => {
     return `${Math.floor(time / 60)}:${('0' + Math.floor(time % 60)).slice(-2)}`
@@ -12,6 +31,9 @@ const MusicItem = ({ cover, artist, name, id, played, isFavorite, songs, setPrev
     const activeSong = songs.filter((item) => item.id === id)
     setPrevSong([currentSong[0]])
     setCurrentSong(activeSong)
+    if (activeFavList) {
+      setActiveFavSong(true)
+    }
   }
 
   // jsx
@@ -26,7 +48,7 @@ const MusicItem = ({ cover, artist, name, id, played, isFavorite, songs, setPrev
         <div className='h-100 d-flex flex-column justify-content-center'>
           <h3>{artist}</h3>
           <h5>{name}</h5>
-          {(played)? <h6>{played} played</h6> : ''}
+          {(played) ? <h6>{played} played</h6> : ''}
         </div>
         {(currentSong[0].id === id && audioHandler) ?
           <div className='d-flex justify-content-between align-items-center equ-boxes'>

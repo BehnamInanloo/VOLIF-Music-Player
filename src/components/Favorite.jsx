@@ -5,13 +5,13 @@ import MusicItem from './Main/MusicItem'
 
 const Favorite = () => {
   // useContext initializing
-  const { songs, setPrevSong, setCurrentSong, currentSong, audioHandler, favList, mainHeight } = useContext(myContext)
+  const { favList, mainHeight } = useContext(myContext)
 
   // jsx
   return (
-    <main className='music-container' style={{height: mainHeight}}>
+    <main className='music-container' style={{ height: mainHeight }}>
       <h2 className='mb-4 mb-sm-5 ls-1'>Favorite list</h2>
-      {(favList.length === 0) ? <p className='alert alert-success alert-custom'> <BsInfoCircleFill size='2.3rem'/> Your favorite list is now empty! Please select your favorite songs...</p> :
+      {(favList.length === 0) ? <p className='alert alert-success alert-custom'> <BsInfoCircleFill size='2.3rem' /> Your favorite list is now empty! Please select your favorite songs...</p> :
         favList.map((item) => (
           <MusicItem
             cover={item.cover}
@@ -21,11 +21,7 @@ const Favorite = () => {
             id={item.id}
             duration={item.duration}
             isFavorite={item.isFavorite}
-            songs={songs}
-            setPrevSong={setPrevSong}
-            setCurrentSong={setCurrentSong}
-            currentSong={currentSong}
-            audioHandler={audioHandler} />
+          />
         ))
       }
     </main>

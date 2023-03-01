@@ -3,6 +3,9 @@ import musicsList from './util'
 
 export const myContext = createContext({
   songs: '', setSongs: '',
+  favList: '', setFavList: '',
+  activeFavList: '', setActiveFavList: '',
+  activeFavSong: '', setActiveFavSong: '',
   audioHandler: '', setAudioHandler: '',
   currentSong: '', setCurrentSong: '',
   prevSong: '', setPrevSong: '',
@@ -11,13 +14,15 @@ export const myContext = createContext({
   playInOrderList: '', setPlayInOrderList: '',
   repeatCurrentSong: '', setRepeatCurrentSong: '',
   shuffelList: '', setShuffelList: '',
-  favList: '', setFavList: '',
   mainHeight: '', setMainHeight: ''
 })
 
 const Context = ({ children }) => {
   // state initializing
   const [songs, setSongs] = useState(musicsList())
+  const [favList, setFavList] = useState([])
+  const [activeFavList, setActiveFavList] = useState(false)
+  const [activeFavSong, setActiveFavSong] = useState(false)
   const [audioHandler, setAudioHandler] = useState(false)
   const [currentSong, setCurrentSong] = useState([songs[0]])
   const [prevSong, setPrevSong] = useState([{
@@ -35,13 +40,15 @@ const Context = ({ children }) => {
   const [playInOrderList, setPlayInOrderList] = useState(true)
   const [repeatCurrentSong, setRepeatCurrentSong] = useState(false)
   const [shuffelList, setShuffelList] = useState(false)
-  const [favList, setFavList] = useState([])
   const [mainHeight, setMainHeight] = useState(0)
 
   // jsx
   return (
     <myContext.Provider value={{
       songs, setSongs,
+      favList, setFavList,
+      activeFavSong, setActiveFavSong,
+      activeFavList, setActiveFavList,
       audioHandler, setAudioHandler,
       currentSong, setCurrentSong,
       songCurrentTime, setSongCurrentTime,
@@ -50,7 +57,6 @@ const Context = ({ children }) => {
       repeatCurrentSong, setRepeatCurrentSong,
       shuffelList, setShuffelList,
       playInOrderList, setPlayInOrderList,
-      favList, setFavList,
       mainHeight, setMainHeight
     }}>
       {children}

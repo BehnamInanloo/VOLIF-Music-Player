@@ -4,11 +4,11 @@ import MusicItem from './Main/MusicItem'
 
 const TopSongs = () => {
   // useContext initializing
-  const { songs, setPrevSong, setCurrentSong, currentSong, audioHandler, mainHeight } = useContext(myContext)
+  const { songs, mainHeight } = useContext(myContext)
 
   // jsx
   return (
-    <div className='music-container' style={{height: mainHeight}}>
+    <div className='music-container' style={{ height: mainHeight }}>
       <h2 className='mb-4 mb-sm-5 ls-1'>Top player songs</h2>
       {songs.map((item) => {
         if (item.played > 10) {
@@ -22,11 +22,6 @@ const TopSongs = () => {
               duration={item.duration}
               played={item.played}
               isFavorite={item.isFavorite}
-              songs={songs}
-              setPrevSong={setPrevSong}
-              setCurrentSong={setCurrentSong}
-              currentSong={currentSong}
-              audioHandler={audioHandler}
             />
           )
         }

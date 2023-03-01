@@ -4,7 +4,7 @@ import MusicItem from './MusicItem'
 
 const Main = () => {
   // useContext initializing
-  const { songs, setPrevSong, setCurrentSong, currentSong, audioHandler, mainHeight } = useContext(myContext)
+  const { songs, mainHeight } = useContext(myContext)
 
   // jsx
   return (
@@ -19,11 +19,6 @@ const Main = () => {
           id={item.id}
           isFavorite={item.isFavorite}
           duration={item.duration}
-          songs={songs}
-          setPrevSong={setPrevSong}
-          setCurrentSong={setCurrentSong}
-          currentSong={currentSong}
-          audioHandler={audioHandler}
         />)
       )}
     </main>

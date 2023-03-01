@@ -24,5 +24,4 @@ const App = () => {
     </Context>
   )
 }
-
 export default App
