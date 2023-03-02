@@ -2,14 +2,14 @@ import { memo, useContext } from 'react'
 import { myContext } from '../contexts'
 import MusicItem from './Main/MusicItem'
 
-const TopSongs = () => {
+const MostPlayedSongs = () => {
   // useContext initializing
   const { songs, mainHeight } = useContext(myContext)
 
   // jsx
   return (
     <div className='music-container' style={{ height: mainHeight }}>
-      <h2 className='mb-4 mb-sm-5 ls-1'>Top player songs</h2>
+      <h2 className='mb-4 mb-sm-5 ls-1'>Most Played songs</h2>
       {songs.map((item) => {
         if (item.played > 10) {
           return (
@@ -29,4 +29,4 @@ const TopSongs = () => {
     </div>
   )
 }
-export default memo(TopSongs)
+export default memo(MostPlayedSongs)

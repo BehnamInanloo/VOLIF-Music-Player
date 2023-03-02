@@ -84,6 +84,21 @@ const Layout = ({ children }) => {
     setSongs(newSongs)
   }, [songFullTime])
 
+
+  // reset function
+  const listReset = () => {
+    setPrevSong([currentSong[0]])
+    setCurrentSong([songs[0]])
+    setAudioHandler(false)
+    setActiveFavList(false)
+    setActiveFavSong(false)
+    setSongCurrentTime(0)
+    setSongFullTime(0)
+    toast.warn('Select your favorite songs')
+    navigate('/')
+    audioRef.current.currentTime = 0
+  }
+
   // automatic go to next song function
   const nextMusicHandler = () => {
     if (activeFavList && activeFavSong) {
@@ -106,16 +121,7 @@ const Layout = ({ children }) => {
           setCurrentSong([favList[shuffleIndex]])
         }
       } else {
-        setPrevSong([currentSong[0]])
-        setCurrentSong([songs[0]])
-        setAudioHandler(false)
-        setActiveFavList(false)
-        setActiveFavSong(false)
-        setSongCurrentTime(0)
-        setSongFullTime(0)
-        toast.warn('Select your favorite songs')
-        navigate('/')
-        audioRef.current.currentTime = 0
+        listReset()
       }
     } else {
       const index = songs.findIndex((item) => item.id === currentSong[0].id)
@@ -156,7 +162,7 @@ const Layout = ({ children }) => {
   // jsx
   return (
     <>
-      <Header audioRef={audioRef} />
+      <Header audioRef={audioRef} listReset={listReset} />
       <audio ref={audioRef} src={currentSong[0].audio}
         onEnded={nextMusicHandler}></audio>
       <main>

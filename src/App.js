@@ -6,7 +6,7 @@ import Context from './contexts'
 import AboutUs from './components/AboutUs'
 import ContactUs from './components/ContactUs'
 import Favorite from './components/Favorite'
-import TopSongs from './components/TopSongs'
+import MostPlayedSongs from './components/MostPlayedSongs'
 
 const App = () => {
   // jsx
@@ -15,10 +15,10 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path='/' element={<Main />} />
-          <Route path='/favorite' element={<Favorite />}/>
-          <Route path='/top' element={<TopSongs />}/>
+          <Route path='/favorite' element={<Favorite />} />
+          <Route path='/most-played' element={<MostPlayedSongs />} />
           <Route path='/about' element={<AboutUs />} />
-          <Route path='/contact' element={<ContactUs />}/>
+          <Route path='/contact' element={<ContactUs />} />
         </Routes>
       </Layout>
     </Context>

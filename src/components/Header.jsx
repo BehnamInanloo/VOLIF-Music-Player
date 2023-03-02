@@ -7,7 +7,7 @@ import { BsArrowRepeat, BsChevronLeft, BsChevronRight, BsMusicNoteList, BsShuffl
 import logo from '../assets/img/logo/main-logo.png'
 import 'react-toastify/dist/ReactToastify.css'
 
-const Header = ({ audioRef }) => {
+const Header = ({ audioRef, listReset }) => {
   // useContext initializing
   const {
     songs,
@@ -34,7 +34,7 @@ const Header = ({ audioRef }) => {
     shuffelList,
     setShuffelList,
   } = useContext(myContext)
-  
+
   // initializing use navigate
   const navigate = useNavigate()
 
@@ -76,7 +76,7 @@ const Header = ({ audioRef }) => {
     }
   }
 
-  // input title on hover function
+  // range input title on hover function
   const timeTitleHover = (event) => {
     const element = event.target
     const mouseOffsetX = event.clientX
@@ -107,16 +107,7 @@ const Header = ({ audioRef }) => {
           setCurrentSong([favList[shuffleIndex]])
         }
       } else {
-        setPrevSong([currentSong[0]])
-        setCurrentSong([songs[0]])
-        setAudioHandler(false)
-        setActiveFavList(false)
-        setActiveFavSong(false)
-        setSongCurrentTime(0)
-        setSongFullTime(0)
-        toast.warn('Select your favorite songs')
-        navigate('/')
-        audioRef.current.currentTime = 0
+        listReset()
       }
     } else {
       const index = songs.findIndex((item) => item.id === currentSong[0].id)
@@ -158,16 +149,7 @@ const Header = ({ audioRef }) => {
           setCurrentSong([favList[shuffleIndex]])
         }
       } else {
-        setPrevSong([currentSong[0]])
-        setCurrentSong([songs[0]])
-        setAudioHandler(false)
-        setActiveFavList(false)
-        setActiveFavSong(false)
-        setSongCurrentTime(0)
-        setSongFullTime(0)
-        toast.warn('Select your favorite songs...')
-        navigate('/')
-        audioRef.current.currentTime = 0
+        listReset()
       }
     } else {
       const index = songs.findIndex((item) => item.id === currentSong[0].id)
@@ -187,28 +169,12 @@ const Header = ({ audioRef }) => {
     }
   }
 
-  // play in order handle function
-  const orderHandle = () => {
-    setPlayInOrderList(true)
-    setRepeatCurrentSong(false)
-    setShuffelList(false)
-    toast.info('Play songs in order', { theme: 'dark' })
-  }
-
-  // current song handle function
-  const repeatHandle = () => {
-    setRepeatCurrentSong(true)
-    setPlayInOrderList(false)
-    setShuffelList(false)
-    toast.info('Repeat current song', { theme: 'dark' })
-  }
-
-  // shuffle list handle function
-  const shuffleHandle = () => {
-    setShuffelList(true)
-    setRepeatCurrentSong(false)
-    setPlayInOrderList(false)
-    toast.info('Shuffle songs', { theme: 'dark' })
+  // play in order, repeat current song and shuffle list handle function
+  const playOrder = (orderStatus, repeatStatus, shuffleStatus, toastText) => {
+    setPlayInOrderList(orderStatus)
+    setRepeatCurrentSong(repeatStatus)
+    setShuffelList(shuffleStatus)
+    toast.info(toastText, { theme: 'dark' })
   }
 
   // jsx
@@ -284,13 +250,16 @@ const Header = ({ audioRef }) => {
                 </div>
                 <div className='col-5 col-lg-4'>
                   <div className='btn-toolbar justify-content-end btn-toolbar-custom-2'>
-                    <button className={`ms-3 btn ${(playInOrderList) ? 'btn-dark' : ''}`} title='Play in order' onClick={orderHandle} >
+                    <button className={`ms-3 btn ${(playInOrderList) ? 'btn-dark' : ''}`} title='Play in order'
+                      onClick={() => playOrder(true, false, false, 'Play songs in order')} >
                       <BsMusicNoteList size='2.3rem' color='#fff' />
                     </button>
-                    <button className={`ms-3 btn ${(repeatCurrentSong) ? 'btn-dark' : ''}`} title='Repeat current song' onClick={repeatHandle} >
+                    <button className={`ms-3 btn ${(repeatCurrentSong) ? 'btn-dark' : ''}`} title='Repeat current song'
+                      onClick={() => playOrder(false, true, false, 'Repeat current song')} >
                       <BsArrowRepeat size='2.3rem' color='#fff' />
                     </button>
-                    <button className={`ms-3 btn ${(shuffelList) ? 'btn-dark' : ''}`} title='Shuffle' onClick={shuffleHandle} >
+                    <button className={`ms-3 btn ${(shuffelList) ? 'btn-dark' : ''}`} title='Shuffle'
+                      onClick={() => playOrder(false, false, true, 'Shuffle songs')} >
                       <BsShuffle size='2.3rem' color='#fff' />
                     </button>
                   </div>
