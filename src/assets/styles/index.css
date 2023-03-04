@@ -216,7 +216,7 @@ header .music-range .range-slider {
 
 header .music-range .range-slider .progress-custom {
   background: radial-gradient(#85eba9, #1db954);
-  z-index: 1000;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -230,10 +230,10 @@ header .music-range input[type='range'] {
 
 header .music-range input[type='range']::-webkit-slider-thumb {
   appearance: none;
-  width: 1rem;
+  width: 0.05rem;
   height: 4rem;
   background-color: #1db954;
-  margin-left: -1.1rem;
+  margin-left: -1rem;
 }
 
 header .music-nav button:hover {
@@ -360,14 +360,6 @@ aside p {
   margin-top: 1.5rem;
 }
 
-.music-item-cover .active {
-  animation-name: active-music-shadow-animation;
-  animation-duration: 1.5s;
-  animation-direction: alternate;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
 .music-container,
 .contact-us-container,
 .about-us-container {
@@ -405,10 +397,6 @@ aside p {
   padding-bottom: 0.7rem;
 }
 
-.music-item.active-box {
-  background-color: #424649;
-}
-
 .music-item::after {
   content: '';
   position: absolute;
@@ -416,6 +404,14 @@ aside p {
   width: 100%;
   height: 3px;
   background: linear-gradient(90deg, rgba(29, 185, 84, 0.8) 80%, rgba(255, 255, 255) 100%);
+}
+
+.music-item.active-music .music-item-cover .music-image {
+  animation-name: active-music-shadow-animation;
+  animation-duration: 1.5s;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }
 
 .music-item .music-item-cover {
@@ -426,6 +422,11 @@ aside p {
   width: 85px;
   height: 85px;
   background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.music-item .music-item-desc .music-item-title,
+.music-item .music-item-options svg {
   cursor: pointer;
 }
 

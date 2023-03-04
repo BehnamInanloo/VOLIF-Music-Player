@@ -64,7 +64,7 @@ const Header = ({ audioRef, listReset }) => {
       }
     })
     setSongs(newSongs)
-    setPrevSong([currentSong[0]])
+    // setPrevSong([currentSong[0]])
     setCurrentSong([{
       ...currentSong[0],
       isFavorite: !currentSong[0].isFavorite
@@ -95,15 +95,15 @@ const Header = ({ audioRef, listReset }) => {
         const index = favList.findIndex((item) => item.id === currentSong[0].id)
         if (playInOrderList || repeatCurrentSong) {
           if (index === favList.length - 1) {
-            setPrevSong([currentSong[0]])
+            // setPrevSong([currentSong[0]])
             setCurrentSong([favList[0]])
           } else {
-            setPrevSong([currentSong[0]])
+            // setPrevSong([currentSong[0]])
             setCurrentSong([favList[index + 1]])
           }
         } else if (shuffelList) {
           const shuffleIndex = Math.floor(Math.random() * favList.length)
-          setPrevSong([currentSong[0]])
+          // setPrevSong([currentSong[0]])
           setCurrentSong([favList[shuffleIndex]])
         }
       } else {
@@ -113,15 +113,15 @@ const Header = ({ audioRef, listReset }) => {
       const index = songs.findIndex((item) => item.id === currentSong[0].id)
       if (playInOrderList || repeatCurrentSong) {
         if (index === songs.length - 1) {
-          setPrevSong([currentSong[0]])
+          // setPrevSong([currentSong[0]])
           setCurrentSong([songs[0]])
         } else {
-          setPrevSong([currentSong[0]])
+          // setPrevSong([currentSong[0]])
           setCurrentSong([songs[index + 1]])
         }
       } else if (shuffelList) {
         const shuffleIndex = Math.floor(Math.random() * songs.length)
-        setPrevSong([currentSong[0]])
+        // setPrevSong([currentSong[0]])
         setCurrentSong([songs[shuffleIndex]])
       }
     }
@@ -134,18 +134,18 @@ const Header = ({ audioRef, listReset }) => {
         const index = favList.findIndex((item) => item.id === currentSong[0].id)
         if (playInOrderList || repeatCurrentSong) {
           if (index == 0) {
-            setPrevSong([currentSong[0]])
+            // setPrevSong([currentSong[0]])
             setCurrentSong([favList[favList.length - 1]])
           } else if (index == -1) {
-            setPrevSong([currentSong[0]])
+            // setPrevSong([currentSong[0]])
             setCurrentSong([favList[0]])
           } else {
-            setPrevSong([currentSong[0]])
+            // setPrevSong([currentSong[0]])
             setCurrentSong([favList[index - 1]])
           }
         } else if (shuffelList) {
           const shuffleIndex = Math.floor(Math.random() * favList.length)
-          setPrevSong([currentSong[0]])
+          // setPrevSong([currentSong[0]])
           setCurrentSong([favList[shuffleIndex]])
         }
       } else {
@@ -155,15 +155,15 @@ const Header = ({ audioRef, listReset }) => {
       const index = songs.findIndex((item) => item.id === currentSong[0].id)
       if (playInOrderList || repeatCurrentSong) {
         if (index <= 0) {
-          setPrevSong([currentSong[0]])
+          // setPrevSong([currentSong[0]])
           setCurrentSong([songs[songs.length - 1]])
         } else {
-          setPrevSong([currentSong[0]])
+          // setPrevSong([currentSong[0]])
           setCurrentSong([songs[index - 1]])
         }
       } else if (shuffelList) {
         const shuffleIndex = Math.floor(Math.random() * songs.length)
-        setPrevSong([currentSong[0]])
+        // setPrevSong([currentSong[0]])
         setCurrentSong([songs[shuffleIndex]])
       }
     }

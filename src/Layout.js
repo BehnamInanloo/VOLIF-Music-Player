@@ -84,7 +84,6 @@ const Layout = ({ children }) => {
     setSongs(newSongs)
   }, [songFullTime])
 
-
   // reset function
   const listReset = () => {
     setPrevSong([currentSong[0]])
@@ -97,6 +96,23 @@ const Layout = ({ children }) => {
     toast.warn('Select your favorite songs')
     navigate('/')
     audioRef.current.currentTime = 0
+  }
+
+  // newSongs handler function 
+  const newSongsHandler = () => {
+    if (audioHandler) {
+      const newSongs = songs.map((item) => {
+        if (item.id === currentSong[0].id) {
+          return {
+            ...item,
+            played: item.played + 1
+          }
+        } else {
+          return item
+        }
+      })
+      setSongs(newSongs)
+    }
   }
 
   // automatic go to next song function
@@ -115,6 +131,7 @@ const Layout = ({ children }) => {
         } else if (repeatCurrentSong) {
           setPrevSong([currentSong[0]])
           setCurrentSong([currentSong[0]])
+          newSongsHandler()
         } else {
           const shuffleIndex = Math.floor(Math.random() * favList.length)
           setPrevSong([currentSong[0]])
@@ -136,6 +153,7 @@ const Layout = ({ children }) => {
       } else if (repeatCurrentSong) {
         setPrevSong([currentSong[0]])
         setCurrentSong([currentSong[0]])
+        newSongsHandler()
       } else {
         const shuffleIndex = Math.floor(Math.random() * songs.length)
         setPrevSong([currentSong[0]])
