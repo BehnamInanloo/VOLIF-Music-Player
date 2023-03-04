@@ -28,14 +28,14 @@ const Layout = ({ children }) => {
     repeatCurrentSong
   } = useContext(myContext)
 
-  // initializing use navigate
+  // useNavigate initializing
   const navigate = useNavigate()
 
   // useRef initializing
   const audioRef = useRef()
   const jumpRef = useRef()
 
-  // useEffect initializing for audio play, pause, currentTime & duration
+  // useEffect initializing for handling audio play, pause, currentTime & duration
   useEffect(() => {
     const playPromise = audioRef.current.play()
 
@@ -69,7 +69,7 @@ const Layout = ({ children }) => {
     }
   }, [audioHandler, currentSong])
 
-  // useEffect initializing for duration updating in MusicItem.jsx
+  // useEffect initializing for updating duration in MusicItem.jsx
   useEffect(() => {
     const newSongs = songs.map((item) => {
       if (item.id === currentSong[0].id) {
@@ -98,7 +98,7 @@ const Layout = ({ children }) => {
     audioRef.current.currentTime = 0
   }
 
-  // newSongs handler function 
+  // Function for handling newSongs 
   const newSongsHandler = () => {
     if (audioHandler) {
       const newSongs = songs.map((item) => {
@@ -115,7 +115,7 @@ const Layout = ({ children }) => {
     }
   }
 
-  // automatic go to next song function
+  // Function for automatically going to next song
   const nextMusicHandler = () => {
     if (activeFavList && activeFavSong) {
       if (favList.length !== 0) {
@@ -162,7 +162,7 @@ const Layout = ({ children }) => {
     }
   }
 
-  // jump to top handler button function
+  // Function for jumping to top
   window.addEventListener('scroll', function () {
     const jumpBtn = jumpRef.current
     if (jumpBtn != undefined) {

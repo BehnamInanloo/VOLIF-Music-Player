@@ -21,7 +21,6 @@ const Context = ({ children }) => {
   // state initializing
   const [songs, setSongs] = useState(musicsList())
   const [favList, setFavList] = useState([])
-  console.log(favList)
   const [activeFavList, setActiveFavList] = useState(false)
   const [activeFavSong, setActiveFavSong] = useState(false)
   const [audioHandler, setAudioHandler] = useState(false)

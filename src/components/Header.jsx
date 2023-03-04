@@ -35,15 +35,15 @@ const Header = ({ audioRef, listReset }) => {
     setShuffelList,
   } = useContext(myContext)
 
-  // initializing use navigate
+  // useNavigate initializing
   const navigate = useNavigate()
 
-  // second to minute function
+  // Function for converting second to minute
   const getCleanTime = (time) => {
     return `${Math.floor(time / 60)}:${('0' + Math.floor(time % 60)).slice(-2)}`
   }
 
-  // new songs and favorite songs function
+  // Function for handling new songs and favorite songs
   const addToFavList = () => {
     const newSongs = songs.map((item) => {
       if (item.id === currentSong[0].id) {
@@ -64,7 +64,7 @@ const Header = ({ audioRef, listReset }) => {
       }
     })
     setSongs(newSongs)
-    // setPrevSong([currentSong[0]])
+    setPrevSong([currentSong[0]])
     setCurrentSong([{
       ...currentSong[0],
       isFavorite: !currentSong[0].isFavorite
@@ -76,7 +76,7 @@ const Header = ({ audioRef, listReset }) => {
     }
   }
 
-  // range input title on hover function
+  // Function for displaying range input title on hover
   const timeTitleHover = (event) => {
     const element = event.target
     const mouseOffsetX = event.clientX
@@ -88,22 +88,22 @@ const Header = ({ audioRef, listReset }) => {
     }
   }
 
-  // go to next song function
+  // Function for going to next song
   const getNext = () => {
     if (activeFavList && activeFavSong) {
       if (favList.length !== 0) {
         const index = favList.findIndex((item) => item.id === currentSong[0].id)
         if (playInOrderList || repeatCurrentSong) {
           if (index === favList.length - 1) {
-            // setPrevSong([currentSong[0]])
+            setPrevSong([currentSong[0]])
             setCurrentSong([favList[0]])
           } else {
-            // setPrevSong([currentSong[0]])
+            setPrevSong([currentSong[0]])
             setCurrentSong([favList[index + 1]])
           }
         } else if (shuffelList) {
           const shuffleIndex = Math.floor(Math.random() * favList.length)
-          // setPrevSong([currentSong[0]])
+          setPrevSong([currentSong[0]])
           setCurrentSong([favList[shuffleIndex]])
         }
       } else {
@@ -113,39 +113,39 @@ const Header = ({ audioRef, listReset }) => {
       const index = songs.findIndex((item) => item.id === currentSong[0].id)
       if (playInOrderList || repeatCurrentSong) {
         if (index === songs.length - 1) {
-          // setPrevSong([currentSong[0]])
+          setPrevSong([currentSong[0]])
           setCurrentSong([songs[0]])
         } else {
-          // setPrevSong([currentSong[0]])
+          setPrevSong([currentSong[0]])
           setCurrentSong([songs[index + 1]])
         }
       } else if (shuffelList) {
         const shuffleIndex = Math.floor(Math.random() * songs.length)
-        // setPrevSong([currentSong[0]])
+        setPrevSong([currentSong[0]])
         setCurrentSong([songs[shuffleIndex]])
       }
     }
   }
 
-  // go to previous song function
+  // Function for going to previous song
   const getBack = () => {
     if (activeFavList && activeFavSong) {
       if (favList.length !== 0) {
         const index = favList.findIndex((item) => item.id === currentSong[0].id)
         if (playInOrderList || repeatCurrentSong) {
           if (index == 0) {
-            // setPrevSong([currentSong[0]])
+            setPrevSong([currentSong[0]])
             setCurrentSong([favList[favList.length - 1]])
           } else if (index == -1) {
-            // setPrevSong([currentSong[0]])
+            setPrevSong([currentSong[0]])
             setCurrentSong([favList[0]])
           } else {
-            // setPrevSong([currentSong[0]])
+            setPrevSong([currentSong[0]])
             setCurrentSong([favList[index - 1]])
           }
         } else if (shuffelList) {
           const shuffleIndex = Math.floor(Math.random() * favList.length)
-          // setPrevSong([currentSong[0]])
+          setPrevSong([currentSong[0]])
           setCurrentSong([favList[shuffleIndex]])
         }
       } else {
@@ -155,21 +155,21 @@ const Header = ({ audioRef, listReset }) => {
       const index = songs.findIndex((item) => item.id === currentSong[0].id)
       if (playInOrderList || repeatCurrentSong) {
         if (index <= 0) {
-          // setPrevSong([currentSong[0]])
+          setPrevSong([currentSong[0]])
           setCurrentSong([songs[songs.length - 1]])
         } else {
-          // setPrevSong([currentSong[0]])
+          setPrevSong([currentSong[0]])
           setCurrentSong([songs[index - 1]])
         }
       } else if (shuffelList) {
         const shuffleIndex = Math.floor(Math.random() * songs.length)
-        // setPrevSong([currentSong[0]])
+        setPrevSong([currentSong[0]])
         setCurrentSong([songs[shuffleIndex]])
       }
     }
   }
 
-  // play in order, repeat current song and shuffle list handle function
+  // Function for handling play in order, repeat current song and shuffle list
   const playOrder = (orderStatus, repeatStatus, shuffleStatus, toastText) => {
     setPlayInOrderList(orderStatus)
     setRepeatCurrentSong(repeatStatus)

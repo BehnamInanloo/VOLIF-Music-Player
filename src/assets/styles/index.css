@@ -430,6 +430,11 @@ aside p {
   cursor: pointer;
 }
 
+.music-item .music-item-options .btn-group-custom a.disabled {
+  background-color: #191c1f;
+  border: #191c1f;
+}
+
 .music-item .music-item-desc .equ-boxes {
   width: 20%;
   height: 40px;

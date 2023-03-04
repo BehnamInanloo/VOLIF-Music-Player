@@ -5,13 +5,13 @@ import logo from '../assets/img/logo/main-logo.png'
 
 const SideBar = () => {
 
-  // main height handler function
+  // Function for handling main height 
   const mainHeightHandler = () => {
     const height = window.getComputedStyle(sideBarRef.current).getPropertyValue('height')
     setMainHeight(height)
   }
 
-  // all & favorite songs activation
+  // Functions for activating all & favorite songs
   const allSongsActivation = () => {
     setActiveFavList(false)
     setActiveFavSong(false)
