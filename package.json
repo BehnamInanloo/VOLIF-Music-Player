@@ -2,7 +2,7 @@
   "name": "14-react-music-player",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://behnaminanloo.github.io/VOLIF-Music-Player",
+  "homepage": "https://behnaminanloo.github.io/VOLIF-music-player",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
