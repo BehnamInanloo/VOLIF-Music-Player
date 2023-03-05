@@ -90,7 +90,7 @@ const Header = ({ audioRef, listReset }) => {
 
   // Function for going to next song
   const getNext = () => {
-    if (activeFavList && activeFavSong) {
+    if ((activeFavList && activeFavSong) || (!activeFavList && activeFavSong)) {
       if (favList.length !== 0) {
         const index = favList.findIndex((item) => item.id === currentSong[0].id)
         if (playInOrderList || repeatCurrentSong) {
@@ -129,7 +129,7 @@ const Header = ({ audioRef, listReset }) => {
 
   // Function for going to previous song
   const getBack = () => {
-    if (activeFavList && activeFavSong) {
+    if ((activeFavList && activeFavSong) || (!activeFavList && activeFavSong)) {
       if (favList.length !== 0) {
         const index = favList.findIndex((item) => item.id === currentSong[0].id)
         if (playInOrderList || repeatCurrentSong) {

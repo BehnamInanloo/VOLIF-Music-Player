@@ -14,7 +14,6 @@ const SideBar = () => {
   // Functions for activating all & favorite songs
   const allSongsActivation = () => {
     setActiveFavList(false)
-    setActiveFavSong(false)
   }
 
   const favSongsActivation = () => {

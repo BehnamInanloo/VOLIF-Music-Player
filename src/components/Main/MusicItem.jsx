@@ -34,41 +34,34 @@ const MusicItem = ({
     const activeSong = songs.filter((item) => item.id === id)
     setPrevSong([currentSong[0]])
     setCurrentSong(activeSong)
-    if (activeFavList) {
-      setActiveFavSong(true)
-    }
+    setActiveFavSong(activeFavList)
   }
 
   // Functions for moving music to up or down
-  const moveUp = () => {
+  const move = (dir) => {
     let newIndex1, newIndex2, Item1, Item2
     let newFavList = [...favList]
     let index = newFavList.findIndex((item) => item.id === id)
     Item1 = newFavList[index]
-    if (index !== 0) {
-      newIndex1 = index - 1
-      newIndex2 = index
-      Item2 = newFavList[newIndex1]
-      newFavList[newIndex1] = Item1
-      newFavList[newIndex2] = Item2
+    newIndex2 = index
+    if (dir === 'up') {
+      if (index !== 0) {
+        newIndex1 = index - 1
+        Item2 = newFavList[newIndex1]
+        newFavList[newIndex1] = Item1
+        newFavList[newIndex2] = Item2
+      }
+    } else {
+      if (index !== newFavList.length - 1) {
+        newIndex1 = index + 1
+        Item2 = newFavList[newIndex1]
+        newFavList[newIndex1] = Item1
+        newFavList[newIndex2] = Item2
+      }
     }
     setFavList(newFavList)
   }
 
-  const moveDown = () => {
-    let newIndex1, newIndex2, Item1, Item2
-    let newFavList = [...favList]
-    let index = newFavList.findIndex((item) => item.id === id)
-    Item1 = newFavList[index]
-    if (index !== newFavList.length - 1) {
-      newIndex1 = index + 1
-      newIndex2 = index
-      Item2 = newFavList[newIndex1]
-      newFavList[newIndex1] = Item1
-      newFavList[newIndex2] = Item2
-    }
-    setFavList(newFavList)
-  }
 
   // Function for adding or removing a music to or from favorite list
   const favoriteHandler = () => {
@@ -132,10 +125,10 @@ const MusicItem = ({
       <div className='music-item-options h-100 d-flex justify-content-between align-items-center'>
         {(activeFavList) ?
           <div className='btn-group btn-group-custom' role='group'>
-            <a className={`btn btn-dark ${(favList[0].id === id)? 'disabled' : ''}`} role='button' onClick={moveUp}>
+            <a className={`btn btn-dark ${(favList[0].id === id) ? 'disabled' : ''}`} role='button' onClick={() => {move('up')}}>
               <BsChevronUp size='1.2rem' />
             </a>
-            <a className={`btn btn-dark ${(favList[favList.length - 1].id === id)? 'disabled' : ''}`} role='button' onClick={moveDown}>
+            <a className={`btn btn-dark ${(favList[favList.length - 1].id === id) ? 'disabled' : ''}`} role='button' onClick={() => {move('down')}}>
               <BsChevronDown size='1.2rem' />
             </a>
           </div>

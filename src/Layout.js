@@ -117,7 +117,7 @@ const Layout = ({ children }) => {
 
   // Function for automatically going to next song
   const nextMusicHandler = () => {
-    if (activeFavList && activeFavSong) {
+    if ((activeFavList && activeFavSong) || (!activeFavList && activeFavSong)) {
       if (favList.length !== 0) {
         const index = favList.findIndex((item) => item.id === currentSong[0].id)
         if (playInOrderList) {
