@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/VOLIF-music-player/static/css/main.b1cfabc4.css",
+    "main.css": "/VOLIF-music-player/static/css/main.1129ef7e.css",
     "main.js": "/VOLIF-music-player/static/js/main.1b8f1eaa.js",
     "static/js/787.edefaf22.chunk.js": "/VOLIF-music-player/static/js/787.edefaf22.chunk.js",
     "static/media/Mohsen-Chavoshi-Gandomgoon.mp3": "/VOLIF-music-player/static/media/Mohsen-Chavoshi-Gandomgoon.cb7b12c81817aeab6249.mp3",
@@ -45,12 +45,12 @@
     "static/media/Farzad-Farzin-Chera-To.jpg": "/VOLIF-music-player/static/media/Farzad-Farzin-Chera-To.ffc9bb4270b5efc2e76b.jpg",
     "static/media/main-logo.png": "/VOLIF-music-player/static/media/main-logo.162688bf20f1e11e199d.png",
     "index.html": "/VOLIF-music-player/index.html",
-    "main.b1cfabc4.css.map": "/VOLIF-music-player/static/css/main.b1cfabc4.css.map",
+    "main.1129ef7e.css.map": "/VOLIF-music-player/static/css/main.1129ef7e.css.map",
     "main.1b8f1eaa.js.map": "/VOLIF-music-player/static/js/main.1b8f1eaa.js.map",
     "787.edefaf22.chunk.js.map": "/VOLIF-music-player/static/js/787.edefaf22.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b1cfabc4.css",
+    "static/css/main.1129ef7e.css",
     "static/js/main.1b8f1eaa.js"
   ]
 }
