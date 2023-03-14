@@ -1,4 +1,4 @@
-@media (max-width: 1199px) {
+@media (max-width: 1199.98px) {
   header .music-cover .music-filter {
     width: 210px;
     height: 210px;
@@ -70,7 +70,7 @@
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 991.98px) {
   header .music-cover svg {
     width: 6rem;
     height: 6rem;
@@ -202,7 +202,7 @@
   }
 }
 
-@media (max-width: 879px) {
+@media (max-width: 879.98px) {
 
   .music-container,
   .contact-us-container,
@@ -246,7 +246,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   header .music-cover {
     height: 640px;
   }
@@ -416,7 +416,7 @@
   }
 }
 
-@media (max-width: 671px) {
+@media (max-width: 671.98px) {
   .jump-to-top {
     font-size: 16px;
     padding: 0.9rem 1.3rem 1rem 1.3rem;
@@ -444,7 +444,7 @@
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 575.98px) {
   .jump-to-top {
     bottom: 65px;
   }
@@ -516,7 +516,7 @@
   }
 }
 
-@media (max-width: 545px) {
+@media (max-width: 545.98px) {
   header .music-cover {
     height: 490px;
   }
@@ -543,7 +543,7 @@
   }
 }
 
-@media (max-width: 515px) {
+@media (max-width: 515.98px) {
   .jump-to-top {
     font-size: 14px;
     padding: 0.7rem 1.1rem 0.8rem 1.1rem;
@@ -684,13 +684,13 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480.98px) {
   header .Toastify__toast {
     border-radius: 4px;
   }
 }
 
-@media (max-width: 465px) {
+@media (max-width: 465.98px) {
   header .music-cover {
     height: 390px;
   }
@@ -728,7 +728,7 @@
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 415.98px) {
   .jump-to-top {
     right: 9%;
   }
@@ -840,7 +840,7 @@
   }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 370.98px) {
   .jump-to-top {
     font-size: 12px;
     padding: 0.6rem 1rem 0.7rem 1rem;
@@ -887,7 +887,7 @@
   }
 }
 
-@media (max-width: 325px) {
+@media (max-width: 325.98px) {
   .jump-to-top {
     font-size: 11px;
     padding: 0.5rem 0.8rem 0.6rem 0.8rem;
@@ -1016,7 +1016,7 @@
   }
 }
 
-@media (max-width: 276px) {
+@media (max-width: 276.98px) {
   header .music-cover {
     height: 250px;
   }
